@@ -103,10 +103,14 @@ body{
     text-align: center;
 }
 
-.center{
-    justify-content: center;
-}
-
 .img-end{
     height: 400px !important;
+}
+
+.bottom-line{
+    flex-direction: column;
+}
+
+.bottom-line button{
+    margin-bottom: 16px;
 }

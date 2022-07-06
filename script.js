@@ -1,6 +1,12 @@
 let correctAnswers = 0;
+let questions = [];
 
-function startQuiz() {
+function HTMLQuiz() {
+    questions = questhtml;
+    startQuiz();
+}
+
+function startQuiz(){
     let i = 0;
     let card = document.getElementById('quizcard');
     card.innerHTML = '';
@@ -30,6 +36,7 @@ function answer(i, number){
     document.getElementById('answer1').onclick = null;
     document.getElementById('answer2').onclick = null;
     document.getElementById('answer3').onclick = null;
+    document.getElementById('answer4').onclick = null;
 
     if (rightAnswer == number){
         document.getElementById(`answer${number}`).classList.add('bg-success');
@@ -85,6 +92,11 @@ function templateQuizCard(i) {
                         ${questions[i]['answer3']}
                     </div>
                 </div>
+                <div id="answer4" class="card answer" onclick="answer(${i}, 4)">
+                <div class="card-body">
+                    ${questions[i]['answer4']}
+                </div>
+            </div>
             </div>
             <div class="bottom-line">
                 <p class="card-text"> Frage ${i+1} von ${questions.length}</p>
