@@ -6,6 +6,19 @@ function HTMLQuiz() {
     startQuiz();
 }
 
+
+function CSSQuiz() {
+    questions = questcss;
+    startQuiz();
+}
+
+
+function JSQuiz() {
+    questions = questjs;
+    startQuiz();
+}
+
+
 function startQuiz(){
     let i = 0;
     let card = document.getElementById('quizcard');
