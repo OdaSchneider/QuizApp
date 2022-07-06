@@ -4,35 +4,42 @@ html{
 
 body{
     margin: 0;
-    background-color: rgb(59, 59, 59) !important;
+    background-color: rgb(14, 0, 63) !important;
+}
+
+.mainpage{
+    display: flex;
 }
 
 .navbar{
-    position: fixed !important;
-    width: 100%;
-    z-index: 1;
-    background-color: rgb(59, 59, 59);
-    justify-content: center !important;
+    background-color: rgb(50, 2, 88);
+    justify-content: flex-start !important;
+    align-items: flex-start !important;
 }
 
 .navbar img{
-    width: 60px;
-    height: 60px;
+    width: 100px;
+    height: 100px;
     object-fit: contain;
-    margin-right: 32px;
+    margin: 16px;
+    cursor: pointer;
 }
 
 .container-fluid{
     margin-top: 32px;
-    justify-content: center!important;
+    flex-direction: column;
+    align-items: flex-start !important;
 }
 
-.container-fluid span{
+.container-fluid a{
     font-family: 'Major Mono Display', monospace;
+    font-size: 32px;
     color: rgb(253, 172, 91);
+    margin: 16px;
+    margin-bottom: 16px;
 }
 
-.container-fluid span:hover{
+.container-fluid a:hover{
     font-family: 'Major Mono Display', monospace;
     color: white;
 }
@@ -46,6 +53,7 @@ body{
     justify-content: center;
     align-items: center;
     height: 100vh;
+    width: 100%;
 }
 
 .card img{

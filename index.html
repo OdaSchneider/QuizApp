@@ -19,34 +19,38 @@
 </head>
 
 <body>
-  <nav class="navbar">
-    <div class="container-fluid">
-      <img src="img/icon/logo2.png">
-      <span class="navbar-brand mb-0 h1">Wissenschaft und Technik - Quiz</span>
-    </div>
-  </nav>
+  <div class="mainpage">
+    <nav class="navbar">
+      <div class="container-fluid">
+        <img src="img/icon/logo2.png">
+        <a href="#" class="navbar-brand mb-0 h1">HTML</span></a>
+        <a href="#" class="navbar-brand mb-0 h1">CSS</span></a>
+        <a href="#" class="navbar-brand mb-0 h1">JS</span></a>
+      </div>
+    </nav>
 
-  <div class="question-card">
-    <div class="card quizcard">
-      <div id="quizcard">
-        <div class="card-body">
-
-          <img src="img/quiz.jpg" id="card-img-top" class="card-img-top">
-
-          <h5 id="card-title" class="card-title text-center">Willkommen!</h5>
-          <p id="card-text" class="card-text text-center">
-            Bei diesem Quiz erwarten dich Fragen rund um den Bereich Naturwissenschaft und Technik.
-          </p>
-          <p id="card-text" class="card-text text-center">
-            Bist du bereit? Dann drücke jetzt den Start-Button!
-          </p>
-          <div class="bottom-line center">
-            <button onclick="startQuiz()" id="btn" class="btn btn-primary">Quiz starten</button>
+    <div class="question-card">
+      <div class="card quizcard">
+        <div id="quizcard">
+          <div class="card-body">
+            <a href="index.html">
+              <img src="img/quiz.jpg" id="card-img-top" class="card-img-top">
+            </a>
+            <h5 id="card-title" class="card-title text-center">Willkommen!</h5>
+            <p id="card-text" class="card-text text-center">
+              Bei diesem Quiz erwarten dich Fragen rund um den Bereich Naturwissenschaft und Technik.
+            </p>
+            <p id="card-text" class="card-text text-center">
+              Bist du bereit? Dann drücke jetzt den Start-Button!
+            </p>
+            <div class="bottom-line center">
+              <button onclick="startQuiz()" id="btn" class="btn btn-primary">Quiz starten</button>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="progress">
-        <div id='progress-bar' class="progress-bar" role="progressbar" style="width: 0%"></div>
+        <div class="progress">
+          <div id='progress-bar' class="progress-bar" role="progressbar" style="width: 0%"></div>
+        </div>
       </div>
     </div>
   </div>
