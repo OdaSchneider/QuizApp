@@ -155,7 +155,7 @@ let questjs = [
     {
         "question": "Wie schreibt man einen JS-Array?",
         "answer1": "myArray = ([HTML], [CSS], [JS])",
-        "answer2": "myArray = ['HTML','CSS','JS']",
+        "answer2": "myArray = ['HTML' , 'CSS' , 'JS']",
         "answer3": "myArray = [(1='HTML'),(2='CSS'),(3='JS')]",
         "answer4": "myArray = [HTML, CSS, JS]",
         "rightAnswer": 2,

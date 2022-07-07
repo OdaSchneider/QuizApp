@@ -11,24 +11,28 @@ function init(){
 
 function HTMLQuiz() {
     questions = questhtml;
+    correctAnswers = 0;
     startQuiz();
 }
 
 
 function CSSQuiz() {
     questions = questcss;
+    correctAnswers = 0;
     startQuiz();
 }
 
 
 function JSQuiz() {
     questions = questjs;
+    correctAnswers = 0;
     startQuiz();
 }
 
 
 function PythonQuiz() {
     questions = questpython;
+    correctAnswers = 0;
     startQuiz();
 }
 
@@ -52,7 +56,7 @@ function nextQuestion(i) {
         disableBtn();
         progressBar(i);
     }else{
-        card.innerHTML = templateEndQuiz();
+        card.innerHTML = EndQuiz();
         document.getElementById('progress-bar').style.display = 'none';
     }
 }
@@ -74,6 +78,17 @@ function answer(i, number){
     }
     templateQuizCard(i);
     enableBtn();
+}
+
+function EndQuiz(){
+    if(correctAnswers/questions.length < 0.6){
+        return templateStudent();
+    }if (correctAnswers/questions.length < 0.8){
+        return templatePro();
+    }
+    else{
+        return templateMaster();
+    }
 }
 
 function disableBtn(){
@@ -100,9 +115,7 @@ function templateStart(){
             <div id="quizcard">
 
             <div class="card-body">
-                <a href="index.html">
                 <img src="img/quiz.jpg" id="card-img-top" class="card-img-top">
-                </a>
                 <h5 id="card-title" class="card-title text-center">Willkommen!</h5>
                 <p id="card-text" class="card-text text-center">
                 Bei diesem Quiz kannst du dein Wissen zu verschiedenen Programmiersparchen testen.
@@ -166,15 +179,41 @@ function templateQuizCard(i) {
 }
 
 
-function templateEndQuiz(){
+function templateStudent(){
     return `
     <div class="card-body card-end">
         <h5 id="card-title" class="card-title">
-            Geschafft! <span>Du hast <b>${correctAnswers}</b> von <b>${questions.length}</b> Fragen richtig beantwortet</span>
+            Bleib dran!<span>Du hast <b>${correctAnswers}</b> von <b>${questions.length}</b> Fragen richtig beantwortet</span>
         </h5>
-        <p>Wir hoffen dir hat das Quiz gefallen!</p>
+        <p>Lerne weiter und verbesser dich. Wir haben alle klein Angefangen.</p>
         <br>
-        <img src="img/end.png" id="card-img-top" class="card-img-top img-end">
+        <img src="img/student.jpg" id="card-img-top" class="card-img-top img-end">
+        <button onclick="init()" class="btn btn-primary">Zurück zum Start</button>
+    </div>`;
+}
+
+function templatePro(){
+    return `
+    <div class="card-body card-end">
+        <h5 id="card-title" class="card-title">
+            Solides Wissen!<span>Du hast <b>${correctAnswers}</b> von <b>${questions.length}</b> Fragen richtig beantwortet</span>
+        </h5>
+        <p>Gut gemacht! Übe weiter und baue dein Potential aus.</p>
+        <br>
+        <img src="img/pro.jpg" id="card-img-top" class="card-img-top img-end">
+        <button onclick="init()" class="btn btn-primary">Zurück zum Start</button>
+    </div>`;
+}
+
+function templateMaster(){
+    return `
+    <div class="card-body card-end">
+        <h5 id="card-title" class="card-title">
+            Spitzenklasse! <span>Du hast <b>${correctAnswers}</b> von <b>${questions.length}</b> Fragen richtig beantwortet</span>
+        </h5>
+        <p>Du beherscht bereits die Grundlegenden Dinge der Programmiersprache. Gut gemacht!</p>
+        <br>
+        <img src="img/master.jpg" id="card-img-top" class="card-img-top img-end">
         <button onclick="init()" class="btn btn-primary">Zurück zum Start</button>
     </div>`;
 }
