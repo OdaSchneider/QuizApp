@@ -1,6 +1,14 @@
 let correctAnswers = 0;
 let questions = [];
 
+
+function init(){
+    let start = document.getElementById('question-card');
+    start.innerHTML = '';
+    start.innerHTML = templateStart();
+}
+
+
 function HTMLQuiz() {
     questions = questhtml;
     startQuiz();
@@ -15,6 +23,12 @@ function CSSQuiz() {
 
 function JSQuiz() {
     questions = questjs;
+    startQuiz();
+}
+
+
+function PythonQuiz() {
+    questions = questpython;
     startQuiz();
 }
 
@@ -80,6 +94,39 @@ function progressBar(i){
 
 //------------------ TEMPLATE ----------------------------------//
 
+function templateStart(){
+    return `
+        <div class="card quizcard">
+            <div id="quizcard">
+
+            <div class="card-body">
+                <a href="index.html">
+                <img src="img/quiz.jpg" id="card-img-top" class="card-img-top">
+                </a>
+                <h5 id="card-title" class="card-title text-center">Willkommen!</h5>
+                <p id="card-text" class="card-text text-center">
+                Bei diesem Quiz kannst du dein Wissen zu verschiedenen Programmiersparchen testen.
+                </p>
+                <p id="card-text" class="card-text text-center">
+                Bist du bereit? Dann starte jetzt mit der Programmiersparche deinen Wahl!
+                </p>
+                <div class="bottom-line">
+                <button onclick="HTMLQuiz()" id="btn" class="btn btn-primary">HTML</button>
+                <button onclick="CSSQuiz()" id="btn" class="btn btn-primary">CSS</button>
+                <button onclick="JSQuiz()" id="btn" class="btn btn-primary">JS</button>
+                <button onclick="PythonQuiz()" id="btn" class="btn btn-primary">Python</button>
+                </div>
+            </div>
+
+
+            </div>
+            <div class="progress">
+            <div id='progress-bar' class="progress-bar" role="progressbar" style="width: 0%"></div>
+            </div>
+        </div>`
+}
+
+
 function templateQuizCard(i) {
     return `
         <div class="card-body">
@@ -125,9 +172,9 @@ function templateEndQuiz(){
         <h5 id="card-title" class="card-title">
             Geschafft! <span>Du hast <b>${correctAnswers}</b> von <b>${questions.length}</b> Fragen richtig beantwortet</span>
         </h5>
-        <p>Wir hoffen dir hat das Quiz gefallen</p>
+        <p>Wir hoffen dir hat das Quiz gefallen!</p>
         <br>
         <img src="img/end.png" id="card-img-top" class="card-img-top img-end">
-        <button onclick="startQuiz()" class="btn btn-primary">Nochmal spielen</button>
+        <button onclick="init()" class="btn btn-primary">Zurück zum Start</button>
     </div>`;
 }

@@ -18,46 +18,19 @@
     crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body onload="init()">
   <div class="mainpage">
     <nav class="navbar">
       <div class="container-fluid">
-        <img src="img/icon/logo2.png">
-        <a href="#" class="navbar-brand mb-0 h1">HTML</span></a>
-        <a href="#" class="navbar-brand mb-0 h1">CSS</span></a>
-        <a href="#" class="navbar-brand mb-0 h1">JS</span></a>
+        <img onclick="init()" src="img/icon/logo2.png">
+        <p onclick="HTMLQuiz()" class="navbar-brand mb-0 h1">HTML</span></p>
+        <p onclick="CSSQuiz()" class="navbar-brand mb-0 h1">CSS</span></p>
+        <p onclick="JSQuiz()" class="navbar-brand mb-0 h1">JS</span></p>
+        <p onclick="PythonQuiz()" class="navbar-brand mb-0 h1">Python</span></p>
       </div>
     </nav>
 
-    <div class="question-card">
-      <div class="card quizcard">
-        <div id="quizcard">
-
-          
-          <div class="card-body">
-            <a href="index.html">
-              <img src="img/quiz.jpg" id="card-img-top" class="card-img-top">
-            </a>
-            <h5 id="card-title" class="card-title text-center">Willkommen!</h5>
-            <p id="card-text" class="card-text text-center">
-              Bei diesem Quiz kannst du dein Wissen zu verschiedenen Programmiersparchen testen.
-            </p>
-            <p id="card-text" class="card-text text-center">
-              Bist du bereit? Dann starte jetzt mit der Programmiersparche deinen Wahl!
-            </p>
-            <div class="bottom-line">
-              <button onclick="HTMLQuiz()" id="btn" class="btn btn-primary">HTML</button>
-              <button onclick="CSSQuiz()" id="btn" class="btn btn-primary">CSS</button>
-              <button onclick="JSQuiz()" id="btn" class="btn btn-primary">JS</button>
-            </div>
-          </div>
-
-
-        </div>
-        <div class="progress">
-          <div id='progress-bar' class="progress-bar" role="progressbar" style="width: 0%"></div>
-        </div>
-      </div>
+    <div id="question-card" class="question-card">
     </div>
   </div>
 
