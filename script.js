@@ -78,7 +78,7 @@ function answer(i, numberOfSelectedAnswer){
         document.getElementById(`answer${numberOfSelectedAnswer}`).classList.add('bg-danger');
         document.getElementById(`answer${rightAnswer}`).classList.add('bg-success');
     }
-    QuizCard(i);
+    displayQuizCard(i);
     enableBtn();
 }
 
@@ -226,7 +226,7 @@ function Master(){
         <h5 id="card-title" class="card-title">
             Spitzenklasse! <span>Du hast <b>${correctAnswers}</b> von <b>${questions.length}</b> Fragen richtig beantwortet</span>
         </h5>
-        <p>Du gehörst zu den Profis. Gut gemacht!</p>
+        <p>Du gehörst zu den Profis</p>
         <br>
         <img src="img/master.jpg" id="card-img-top" class="card-img-top img-end">
         <button onclick="init()" class="btn btn-primary">Zurück zum Start</button>
