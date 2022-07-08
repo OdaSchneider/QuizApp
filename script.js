@@ -59,7 +59,6 @@ function nextQuestion(i) {
     }
     else{
         card.innerHTML = EndQuiz();
-        document.getElementById('progress-bar').style.width = `100%`;
     }
 }
 
