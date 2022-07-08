@@ -1,4 +1,4 @@
-let questhtml = [
+let questdataHTML = [
     {
         "question": "Wer hat HTML erfunden?",
         "answer1": "Jimmy Wales",
@@ -58,7 +58,7 @@ let questhtml = [
     },
 ]
 
-let questcss = [
+let questdataCSS= [
      {
         "question": "Wofür steht CSS?",
         "answer1": "Computer Style Sheet",
@@ -115,7 +115,7 @@ let questcss = [
     },
 ]
 
-let questjs = [
+let questdataJS = [
      {
         "question": "In welchen HTML Tag wird JavaScript geschrieben?",
         "answer1": "< js >",
@@ -173,7 +173,7 @@ let questjs = [
 ]
 
 
-let questpython = [
+let questdataPython = [
     {
         "question": "Wie kannst du einer Variable den numerischen Wert 5 zuweisen?",
         "answer1": "number = 5",

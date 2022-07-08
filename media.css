@@ -39,6 +39,10 @@
 }
 
 @media(max-width: 480px){
+    .quizcard{
+        width: 25rem;
+    }
+
     .mainpage{
         display: block;
     }
