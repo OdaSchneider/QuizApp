@@ -114,3 +114,17 @@ body{
 .bottom-line button{
     margin-bottom: 16px;
 }
+
+.responsiveButton{
+    display: none;
+    width: 24px !important;
+    height: 24px !important;
+}
+
+.responsiveMenu{
+    display: none;
+}
+
+.responsiveMenu p{
+    color: #fcb35b;
+}

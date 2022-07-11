@@ -122,6 +122,22 @@ function updateProgressBar(i){
 }
 
 
+function openResponsiveMenu(){
+    document.getElementById('responsiveMenu').innerHTML = navMenu();
+    document
+        .getElementById('responsiveButton')
+        .setAttribute('onclick', `javascript: closeResponsiveMenu()`);
+}
+
+
+function closeResponsiveMenu(){
+    document.getElementById('responsiveMenu').innerHTML = '';
+    document
+    .getElementById('responsiveButton')
+    .setAttribute('onclick', `javascript: openResponsiveMenu()`);
+}
+
+
 //------------------ TEMPLATES ----------------------------------//
 
 function displayStart(){
@@ -204,4 +220,13 @@ function result(resulttitle, resultparagraph, resultimg){
         <img src="${resultimg}" id="card-img-top" class="card-img-top img-end">
         <button onclick="init()" class="btn btn-primary">Zurück zum Start</button>
     </div>`;
+}
+
+
+function navMenu(){
+    return `
+        <p onclick="HTMLQuiz()" class="navbar-brand mb-0 h1">HTML</span></p>
+        <p onclick="CSSQuiz()" class="navbar-brand mb-0 h1">CSS</span></p>
+        <p onclick="JSQuiz()" class="navbar-brand mb-0 h1">JS</span></p>
+        <p onclick="PythonQuiz()" class="navbar-brand mb-0 h1">Python</span></p>`;
 }

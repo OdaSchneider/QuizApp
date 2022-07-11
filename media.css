@@ -18,6 +18,21 @@
 }
 
 @media(max-width: 570px){
+    .responsiveButton{
+        display: block;
+    }
+
+    .responsiveMenu{
+        display: flex;
+        justify-content: space-between;
+        margin: 8px 32px 8px 32px;
+    }
+
+    .responsiveMenu p:hover{
+        color: white;
+        cursor: pointer;
+    }
+
     .quizcard{
         width: 25rem;
     }
@@ -29,7 +44,7 @@
     .container-fluid {
         margin-top: unset;
         flex-direction: row;
-        justify-content: center !important;
+        align-items: center !important;
     }
 
     .container-fluid p{
@@ -43,8 +58,8 @@
 
     .question-card{
         height: unset;
-        margin-top: 64px;
-        margin-bottom: 64px;
+        margin-top: 32px;
+        margin-bottom: 32px;
     }
 
     .card-text{

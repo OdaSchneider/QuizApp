@@ -5,7 +5,7 @@
   <meta charset='utf-8'>
   <meta http-equiv='X-UA-Compatible' content='IE=edge'>
   <title>Wissenschaft und Technik - Quiz</title>
-  <link rel="icon" type="image/x-icon" href="img/icon/logo1.png">
+  <link rel="icon" type="image/x-icon" href="./img/logo1.png">
   <meta name='viewport' content='width=device-width, initial-scale=1'>
   <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
   <link rel='stylesheet' type='text/css' media='screen' href='media.css'>
@@ -19,22 +19,24 @@
 </head>
 
 <body onload="init()">
+  
   <div class="mainpage">
     <nav class="navbar">
       <div class="container-fluid">
-        <img onclick="init()" src="img/icon/logo2.png">
+        <img onclick="init()" src="./img/logo2.png">
         <p onclick="HTMLQuiz()" class="navbar-brand mb-0 h1">HTML</span></p>
         <p onclick="CSSQuiz()" class="navbar-brand mb-0 h1">CSS</span></p>
         <p onclick="JSQuiz()" class="navbar-brand mb-0 h1">JS</span></p>
         <p onclick="PythonQuiz()" class="navbar-brand mb-0 h1">Python</span></p>
+        <img onclick="openResponsiveMenu()" id="responsiveButton" class="responsiveButton" src="./img/icon/menu.ico">
       </div>
     </nav>
 
-    <div id="question-card" class="question-card">
-    </div>
+    <div id="responsiveMenu" class="responsiveMenu"></div>
+
+    <div id="question-card" class="question-card"></div>
+
   </div>
-
-
 </body>
 
 </html>
