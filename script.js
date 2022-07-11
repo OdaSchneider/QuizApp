@@ -58,7 +58,7 @@ function nextQuestion(i) {
         updateProgressBar(i);
     }
     else{
-        card.innerHTML = EndQuiz();
+        card.innerHTML = endQuiz();
     }
 }
 
@@ -90,18 +90,18 @@ function disableAnswerButton(){
 }
 
 
-function EndQuiz(){
+function endQuiz(){
     AUDIO_End.play();
     let points = correctAnswers/questions.length;
 
     if( points < 0.6){
-        return Student();
+        return result('Bleib dran!', 'Lerne weiter und verbesser dich. Wir haben alle klein Angefangen.', 'img/student.jpg');
     }
     if (points < 0.8){
-        return Pro();
+        return result('Solides Wissen!', 'Gut gemacht! Übe weiter und baue dein Potential aus.', 'img/pro.jpg');
     }
     else{
-        return Master();
+        return result('Spitzenklasse!', 'Du gehörst zu den Profis', 'img/master.jpg');
     }
 }
 
@@ -193,41 +193,15 @@ function displayQuizCard(i) {
 }
 
 
-function Student(){
+function result(resulttitle, resultparagraph, resultimg){
     return `
     <div class="card-body card-end">
         <h5 id="card-title" class="card-title">
-            Bleib dran!<span>Du hast <b>${correctAnswers}</b> von <b>${questions.length}</b> Fragen richtig beantwortet</span>
+            ${resulttitle}<span>Du hast <b>${correctAnswers}</b> von <b>${questions.length}</b> Fragen richtig beantwortet</span>
         </h5>
-        <p>Lerne weiter und verbesser dich. Wir haben alle klein Angefangen.</p>
+        <p>${resultparagraph}</p>
         <br>
-        <img src="img/student.jpg" id="card-img-top" class="card-img-top img-end">
-        <button onclick="init()" class="btn btn-primary">Zurück zum Start</button>
-    </div>`;
-}
-
-function Pro(){
-    return `
-    <div class="card-body card-end">
-        <h5 id="card-title" class="card-title">
-            Solides Wissen!<span>Du hast <b>${correctAnswers}</b> von <b>${questions.length}</b> Fragen richtig beantwortet</span>
-        </h5>
-        <p>Gut gemacht! Übe weiter und baue dein Potential aus.</p>
-        <br>
-        <img src="img/pro.jpg" id="card-img-top" class="card-img-top img-end">
-        <button onclick="init()" class="btn btn-primary">Zurück zum Start</button>
-    </div>`;
-}
-
-function Master(){
-    return `
-    <div class="card-body card-end">
-        <h5 id="card-title" class="card-title">
-            Spitzenklasse! <span>Du hast <b>${correctAnswers}</b> von <b>${questions.length}</b> Fragen richtig beantwortet</span>
-        </h5>
-        <p>Du gehörst zu den Profis</p>
-        <br>
-        <img src="img/master.jpg" id="card-img-top" class="card-img-top img-end">
+        <img src="${resultimg}" id="card-img-top" class="card-img-top img-end">
         <button onclick="init()" class="btn btn-primary">Zurück zum Start</button>
     </div>`;
 }
